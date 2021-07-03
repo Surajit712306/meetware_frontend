@@ -14,7 +14,7 @@ function SnackBar({children, closeSnackBar}) {
         return () => {
             clearTimeout(id);
         }
-    }, []);
+    }, [closeSnackBar]);
 
     return (
         <div className="snack-bar">

@@ -7,11 +7,11 @@ const VideoChat = props => {
   return (
     <div className="app">
       <Switch>
-        <Route path="/:roomId">
-          <Room />
-        </Route>
         <Route exact path="/">
           <CreateRoom />
+        </Route>
+        <Route path="/:roomId">
+          <Room />
         </Route>
         <Redirect to="/" />
       </Switch>

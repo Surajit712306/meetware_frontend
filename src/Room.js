@@ -264,12 +264,19 @@ const Room = props => {
       }
 
       getLocalVideoStream();
-    }, []);
+    }, [params.roomId]);
 
     useEffect(() => {
         const localVideo = localVideoRef.current;
         localVideo.onloadedmetadata = e => {
             localVideo.play();
+        }
+
+        return () => {
+            streamRef.current?.getTracks().forEach(track => {
+                track.stop(); 
+            });
+            socketRef.current?.disconnect();
         }
 
     }, []);
@@ -439,10 +446,6 @@ const Room = props => {
                             : <VideocamOffIcon />}
                         </div>}
                         <div className="action" onClick={() => {
-                                streamRef.current?.getTracks().forEach(track => {
-                                    track.stop(); 
-                                });
-                                socketRef.current?.disconnect();
                                 history.push('/');
                             }} > 
                             <CallEndIcon />

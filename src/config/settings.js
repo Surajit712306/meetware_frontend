@@ -1,0 +1,1 @@
+export const BACKEND_HOST = "https://meetware.herokuapp.com";

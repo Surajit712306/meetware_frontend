@@ -1,0 +1,27 @@
+.loader
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+}
+
+.loader__content 
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: blue blue transparent blue;
+    animation: spinner 0.6s linear forwards infinite;  
+}
+
+@keyframes spinner 
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }    
+}

@@ -415,7 +415,7 @@ const Room = props => {
                 {error && <Error error={error} />}
                 <div className="room">
                     <div className="user user--local" ref={localUserRef}>
-                        <video className={`user__video  ${!isCamera && "camera-off"}`} ref={localVideoRef}></video>
+                        <video muted className={`user__video  ${!isCamera && "camera-off"}`} ref={localVideoRef}></video>
                         {!isCamera && <div className="user__video video--local camera-off-placeholder">
                             Camera off
                         </div>}

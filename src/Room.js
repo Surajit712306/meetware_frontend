@@ -446,7 +446,7 @@ const Room = props => {
                             : <VideocamOffIcon />}
                         </div>}
                         <div className="action" onClick={() => {
-                                history.push('/');
+                                history.replace('/');
                             }} > 
                             <CallEndIcon />
                         </div>

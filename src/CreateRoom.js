@@ -32,7 +32,7 @@ const CreateRoom = props => {
       <div className="create-room">
           <h3 className="brand">Meetware</h3>
           <div className="app-description">
-            Meetware is an application for video conference, meeting, video chatting
+            Meetware is an application for video conferencing, meeting, video chatting
             , broadcasting and so on.
             <br/>
             Create a meeting and share the link to join.
